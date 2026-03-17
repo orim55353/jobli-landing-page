@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jobli — כשגיוס פוגש כישרון</title>
+    <meta
+      name="description"
+      content="Jobli נותנת למעסיקים דשבורד גיוס שבאמת עובד, ולמחפשי עבודה אפליקציה שבה המשרה הנכונה מוצאת אתכם."
+    />
+    <!-- Open Graph -->
+    <meta property="og:title" content="Jobli — כשגיוס פוגש כישרון" />
+    <meta property="og:description" content="Jobli נותנת למעסיקים דשבורד גיוס שבאמת עובד, ולמחפשי עבודה אפליקציה שבה המשרה הנכונה מוצאת אתכם." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://job-li.co.il" />
+    <meta property="og:site_name" content="Jobli" />
+    <meta property="og:locale" content="he_IL" />
+    <meta property="og:image" content="https://job-li.co.il/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Jobli — כשגיוס פוגש כישרון" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Jobli — כשגיוס פוגש כישרון" />
+    <meta name="twitter:description" content="Jobli נותנת למעסיקים דשבורד גיוס שבאמת עובד, ולמחפשי עבודה אפליקציה שבה המשרה הנכונה מוצאת אתכם." />
+    <meta name="twitter:image" content="https://job-li.co.il/og-image.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="stylesheet" href="./styles/main-splash.css" />
+  </head>
+  <body>
+    <!-- Particles -->
+    <canvas id="particles"></canvas>
+
+    <!-- Navbar (simplified) -->
+    <nav class="navbar navbar--splash" id="navbar">
+      <div class="container navbar__inner">
+        <a href="/" class="navbar__logo">
+          <img
+            src="./icon.svg"
+            alt="Jobli"
+            class="navbar__logo-img"
+            width="32"
+            height="32"
+          />
+          <span class="navbar__logo-text">Jobli</span>
+        </a>
+
+        <div class="navbar__cta">
+          <a href="https://app.job-li.co.il" class="btn btn--ghost">התחברות</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Split Hero -->
+    <section class="splash-hero">
+      <!-- Left: Employers (Cyan) -->
+      <a href="/hire" class="splash-hero__half splash-hero__half--left">
+        <div class="splash-hero__content">
+          <p class="splash-hero__eyebrow reveal">למעסיקים</p>
+          <h1 class="splash-hero__headline reveal reveal-delay-1">
+            אני צריך את האנשים הנכונים
+          </h1>
+          <p class="splash-hero__tagline reveal reveal-delay-2">
+            דשבורד אחד למשרות, מועמדים ונתוני גיוס. בלי אקסלים, בלי לקפוץ בין טאבים.
+          </p>
+
+          <!-- Browser mockup thumbnail (same design as hire page) -->
+          <div class="splash-hero__mockup-thumb splash-mockup-wrap splash-mockup-wrap--browser reveal reveal-delay-3">
+            <div class="mockup-browser">
+              <div class="mockup-browser__toolbar">
+                <div class="mockup-browser__dots">
+                  <span class="mockup-browser__dot mockup-browser__dot--red"></span>
+                  <span class="mockup-browser__dot mockup-browser__dot--yellow"></span>
+                  <span class="mockup-browser__dot mockup-browser__dot--green"></span>
+                </div>
+                <div class="mockup-browser__url">app.job-li.co.il</div>
+              </div>
+              <div class="mockup-browser__content">
+                <!-- Sidebar -->
+                <div class="mockup-sidebar">
+                  <div class="mockup-sidebar__logo">
+                    <img src="./icon.svg" alt="Jobli" class="mockup-sidebar__logo-img" width="24" height="24" />
+                    <span class="mockup-sidebar__logo-text" style="font-family: 'Satoshi', sans-serif; font-weight: 600;">Jobli</span>
+                  </div>
+                  <div class="mockup-sidebar__nav">
+                    <div class="mockup-nav-item mockup-nav-item--active">
+                      <span class="mockup-nav-item__icon"></span>
+                      <span>סקירה</span>
+                    </div>
+                    <div class="mockup-nav-item">
+                      <span class="mockup-nav-item__icon"></span>
+                      <span>משרות</span>
+                    </div>
+                    <div class="mockup-nav-item">
+                      <span class="mockup-nav-item__icon"></span>
+                      <span>מועמדים</span>
+                    </div>
+                    <div class="mockup-nav-item">
+                      <span class="mockup-nav-item__icon"></span>
+                      <span>אנליטיקס</span>
+                    </div>
+                    <div class="mockup-nav-item">
+                      <span class="mockup-nav-item__icon"></span>
+                      <span>קמפיינים</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Main Content -->
+                <div class="mockup-main">
+                  <div class="mockup-view mockup-view--active mockup-view--visible" data-view="overview">
+                    <div class="mockup-main__header">סקירה</div>
+                    <div class="mockup-kpi-row">
+                      <div class="mockup-kpi">
+                        <div class="mockup-kpi__label">משרות פעילות</div>
+                        <div class="mockup-kpi__value">12</div>
+                        <div class="mockup-kpi__change">‎+3 השבוע</div>
+                      </div>
+                      <div class="mockup-kpi">
+                        <div class="mockup-kpi__label">מועמדים</div>
+                        <div class="mockup-kpi__value">284</div>
+                        <div class="mockup-kpi__change">‎+47 השבוע</div>
+                      </div>
+                      <div class="mockup-kpi">
+                        <div class="mockup-kpi__label">ראיונות</div>
+                        <div class="mockup-kpi__value">18</div>
+                        <div class="mockup-kpi__change">‎+5 מתוכננים</div>
+                      </div>
+                      <div class="mockup-kpi">
+                        <div class="mockup-kpi__label">זמן לגיוס</div>
+                        <div class="mockup-kpi__value">16d</div>
+                        <div class="mockup-kpi__change">‎-4 ימים מהחודש שעבר</div>
+                      </div>
+                    </div>
+                    <div class="mockup-table">
+                      <div class="mockup-table__header">
+                        <span>שם משרה</span>
+                        <span>מועמדויות</span>
+                        <span>סטטוס</span>
+                        <span>פורסם</span>
+                      </div>
+                      <div class="mockup-table__row">
+                        <span class="mockup-table__job">עובד/ת מחסן</span>
+                        <span class="mockup-table__cell">42</span>
+                        <span><span class="mockup-table__status mockup-table__status--active">פעיל</span></span>
+                        <span class="mockup-table__cell">לפני יומיים</span>
+                      </div>
+                      <div class="mockup-table__row">
+                        <span class="mockup-table__job">חשמלאי/ת</span>
+                        <span class="mockup-table__cell">28</span>
+                        <span><span class="mockup-table__status mockup-table__status--active">פעיל</span></span>
+                        <span class="mockup-table__cell">לפני 5 ימים</span>
+                      </div>
+                      <div class="mockup-table__row">
+                        <span class="mockup-table__job">נהג/ת משלוחים</span>
+                        <span class="mockup-table__cell">19</span>
+                        <span><span class="mockup-table__status mockup-table__status--review">בבדיקה</span></span>
+                        <span class="mockup-table__cell">לפני שבוע</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <span class="splash-hero__cta splash-hero__cta--cyan reveal reveal-delay-4">
+            לדשבורד
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="19" y1="12" x2="5" y2="12" /><polyline points="12 5 5 12 12 19" />
+            </svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- Divider -->
+      <div class="splash-hero__divider">
+        <div class="splash-hero__divider-logo">
+          <img src="./icon.svg" alt="Jobli" width="32" height="32" />
+        </div>
+      </div>
+
+      <!-- Right: Job Seekers (Orange) -->
+      <a href="/candidates" class="splash-hero__half splash-hero__half--right">
+        <div class="splash-hero__content">
+          <p class="splash-hero__eyebrow reveal">למחפשי עבודה</p>
+          <h1 class="splash-hero__headline reveal reveal-delay-1">
+            אני רוצה עבודה שמתאימה לי
+          </h1>
+          <p class="splash-hero__tagline reveal reveal-delay-2">
+            משרות שמותאמות למה שאתם באמת רוצים. סוויפו, שמרו, הגישו מועמדות בשניות.
+          </p>
+
+          <!-- Phone mockup thumbnail (same design as candidates page) -->
+          <div class="splash-hero__mockup-thumb splash-mockup-wrap splash-mockup-wrap--phone reveal reveal-delay-3">
+            <!-- Floating Annotations -->
+            <div class="splash-annotations">
+              <div class="floating-annotation floating-annotation--1">
+                <div class="floating-annotation__icon floating-annotation__icon--orange">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                </div>
+                92% התאמה
+              </div>
+              <div class="floating-annotation floating-annotation--2">
+                <div class="floating-annotation__icon floating-annotation__icon--cyan">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                הוגשה מועמדות
+              </div>
+              <div class="floating-annotation floating-annotation--3">
+                <div class="floating-annotation__icon floating-annotation__icon--green">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                </div>
+                נשמר
+              </div>
+            </div>
+
+            <!-- Phone Mockup -->
+            <div class="phone-mockup phone-mockup--lg">
+              <div class="phone-mockup__screen">
+                <div class="phone-mockup__notch"></div>
+                <div class="phone-mockup__status-bar">
+                  <span class="phone-mockup__status-bar-time">9:41</span>
+                  <span class="phone-mockup__status-bar-icons">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="17" y="4" width="3" height="16" rx="1"/><rect x="12" y="8" width="3" height="12" rx="1"/><rect x="7" y="12" width="3" height="8" rx="1"/><rect x="2" y="16" width="3" height="4" rx="1"/></svg>
+                    <svg width="16" height="14" viewBox="0 0 28 14" fill="currentColor"><rect x="0" y="1" width="22" height="12" rx="2" stroke="currentColor" stroke-width="1" fill="none"/><rect x="2" y="3" width="15" height="8" rx="1"/><rect x="23" y="4" width="3" height="6" rx="1"/></svg>
+                  </span>
+                </div>
+                <div class="phone-mockup__stories-bar">
+                  <div class="phone-mockup__stories-segment"></div>
+                  <div class="phone-mockup__stories-segment"></div>
+                  <div class="phone-mockup__stories-segment"></div>
+                  <div class="phone-mockup__stories-segment"></div>
+                </div>
+                <div class="phone-mockup__cards">
+                  <!-- Card 1 -->
+                  <div class="job-card job-card--gradient-blue" style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80');">
+                    <div class="job-card__hero">
+                      <div class="job-card__header">
+                        <div class="job-card__company-logo job-card__company-logo--blue">Q</div>
+                        <div class="job-card__company-info"><div class="job-card__company-name">QuickShip</div></div>
+                        <span class="job-card__match-badge"><span class="job-card__match-dot"></span> 92% התאמה</span>
+                      </div>
+                      <div class="job-card__title">עובד/ת מחסן</div>
+                      <div class="job-card__salary">₪38 – ₪48 לשעה</div>
+                      <div class="job-card__tags">
+                        <span class="job-card__tag">מהמשרד</span>
+                        <span class="job-card__tag">משרה מלאה</span>
+                        <span class="job-card__tag">ראשון לציון</span>
+                      </div>
+                    </div>
+                    <div class="job-card__body">
+                      <p class="job-card__desc">איסוף, אריזה ומשלוח הזמנות במרכז הפצה מהיר. ללא ניסיון קודם — אנחנו מכשירים.</p>
+                      <div class="job-card__details">
+                        <div class="job-card__detail"><span>ניסיון</span><span class="job-card__detail-value">0-1 שנים</span></div>
+                        <div class="job-card__detail"><span>היקף</span><span class="job-card__detail-value">משרה מלאה</span></div>
+                        <div class="job-card__detail"><span>סוג עבודה</span><span class="job-card__detail-value">מהמשרד</span></div>
+                      </div>
+                      <div class="job-card__benefits">
+                        <span class="job-card__benefit">ביטוח בריאות</span>
+                        <span class="job-card__benefit">שעות נוספות</span>
+                        <span class="job-card__benefit">קרן השתלמות</span>
+                      </div>
+                      <div class="job-card__actions">
+                        <div class="job-card__bookmark"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
+                        <div class="job-card__apply">הגשת מועמדות</div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card 2 -->
+                  <div class="job-card job-card--gradient-purple" style="background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80');">
+                    <div class="job-card__hero">
+                      <div class="job-card__header">
+                        <div class="job-card__company-logo job-card__company-logo--purple">S</div>
+                        <div class="job-card__company-info"><div class="job-card__company-name">SparkTrade</div></div>
+                        <span class="job-card__match-badge"><span class="job-card__match-dot"></span> 88% התאמה</span>
+                      </div>
+                      <div class="job-card__title">חשמלאי/ת</div>
+                      <div class="job-card__salary">₪55 – ₪75 לשעה</div>
+                      <div class="job-card__tags">
+                        <span class="job-card__tag">מהמשרד</span>
+                        <span class="job-card__tag">משרה מלאה</span>
+                        <span class="job-card__tag">תל אביב</span>
+                      </div>
+                    </div>
+                    <div class="job-card__body">
+                      <p class="job-card__desc">התקנה ותחזוקה של מערכות חשמל במבנים מסחריים. רישיון חשמלאי מוסמך — יתרון.</p>
+                      <div class="job-card__details">
+                        <div class="job-card__detail"><span>ניסיון</span><span class="job-card__detail-value">3+ שנים</span></div>
+                        <div class="job-card__detail"><span>היקף</span><span class="job-card__detail-value">משרה מלאה</span></div>
+                        <div class="job-card__detail"><span>סוג עבודה</span><span class="job-card__detail-value">מהמשרד</span></div>
+                      </div>
+                      <div class="job-card__benefits">
+                        <span class="job-card__benefit">הטבות ועד</span>
+                        <span class="job-card__benefit">תקציב כלי עבודה</span>
+                      </div>
+                      <div class="job-card__actions">
+                        <div class="job-card__bookmark"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
+                        <div class="job-card__apply">הגשת מועמדות</div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card 3 -->
+                  <div class="job-card job-card--gradient-green" style="background-image: url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=600&q=80');">
+                    <div class="job-card__hero">
+                      <div class="job-card__header">
+                        <div class="job-card__company-logo job-card__company-logo--green">F</div>
+                        <div class="job-card__company-info"><div class="job-card__company-name">FreshFleet</div></div>
+                        <span class="job-card__match-badge"><span class="job-card__match-dot"></span> 85% התאמה</span>
+                      </div>
+                      <div class="job-card__title">נהג/ת משלוחים</div>
+                      <div class="job-card__salary">₪35 – ₪45 לשעה</div>
+                      <div class="job-card__tags">
+                        <span class="job-card__tag">גמיש</span>
+                        <span class="job-card__tag">משרה מלאה</span>
+                        <span class="job-card__tag">גוש דן</span>
+                      </div>
+                    </div>
+                    <div class="job-card__body">
+                      <p class="job-card__desc">חלוקת חבילות ברחבי המטרופולין. רישיון נהיגה בתוקף. טיפים מעל השכר.</p>
+                      <div class="job-card__details">
+                        <div class="job-card__detail"><span>ניסיון</span><span class="job-card__detail-value">1+ שנים</span></div>
+                        <div class="job-card__detail"><span>היקף</span><span class="job-card__detail-value">משרה מלאה</span></div>
+                        <div class="job-card__detail"><span>סוג עבודה</span><span class="job-card__detail-value">גמיש</span></div>
+                      </div>
+                      <div class="job-card__benefits">
+                        <span class="job-card__benefit">כרטיס דלק</span>
+                        <span class="job-card__benefit">סלולר</span>
+                        <span class="job-card__benefit">תשלום שבועי</span>
+                      </div>
+                      <div class="job-card__actions">
+                        <div class="job-card__bookmark"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
+                        <div class="job-card__apply">הגשת מועמדות</div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card 4 -->
+                  <div class="job-card job-card--gradient-orange" style="background-image: url('https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&q=80');">
+                    <div class="job-card__hero">
+                      <div class="job-card__header">
+                        <div class="job-card__company-logo job-card__company-logo--red">C</div>
+                        <div class="job-card__company-info"><div class="job-card__company-name">CoolAir</div></div>
+                        <span class="job-card__match-badge"><span class="job-card__match-dot"></span> 82% התאמה</span>
+                      </div>
+                      <div class="job-card__title">טכנאי/ת מיזוג</div>
+                      <div class="job-card__salary">₪50 – ₪68 לשעה</div>
+                      <div class="job-card__tags">
+                        <span class="job-card__tag">מהמשרד</span>
+                        <span class="job-card__tag">משרה מלאה</span>
+                        <span class="job-card__tag">חיפה</span>
+                      </div>
+                    </div>
+                    <div class="job-card__body">
+                      <p class="job-card__desc">תחזוקה ותיקון מערכות חימום וקירור באתרי מגורים ומסחר.</p>
+                      <div class="job-card__details">
+                        <div class="job-card__detail"><span>ניסיון</span><span class="job-card__detail-value">2+ שנים</span></div>
+                        <div class="job-card__detail"><span>היקף</span><span class="job-card__detail-value">משרה מלאה</span></div>
+                        <div class="job-card__detail"><span>סוג עבודה</span><span class="job-card__detail-value">מהמשרד</span></div>
+                      </div>
+                      <div class="job-card__benefits">
+                        <span class="job-card__benefit">רכב חברה</span>
+                        <span class="job-card__benefit">תוספת הסמכה</span>
+                      </div>
+                      <div class="job-card__actions">
+                        <div class="job-card__bookmark"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
+                        <div class="job-card__apply">הגשת מועמדות</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <span class="splash-hero__cta splash-hero__cta--orange reveal reveal-delay-4">
+            להורדת האפליקציה
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="19" y1="12" x2="5" y2="12" /><polyline points="12 5 5 12 12 19" />
+            </svg>
+          </span>
+        </div>
+      </a>
+    </section>
+
+    <!-- Minimal Footer -->
+    <footer class="splash-footer">
+      <div class="container splash-footer__inner">
+        <span class="splash-footer__copy">&copy; 2026 Jobli</span>
+        <ul class="splash-footer__links">
+          <li><a href="/privacy">פרטיות</a></li>
+          <li><a href="/terms">תנאי שימוש</a></li>
+          <li><a href="/contact">צור קשר</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script type="module" src="./scripts/main-splash.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1214 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jobli — המשרה הבאה שלך, בסוויפ אחד</title>
+    <meta
+      name="description"
+      content="משרות שמותאמות למה שאתם באמת רוצים. סוויפו, שמרו, הגישו מועמדות תוך 30 שניות. חינם ב-iOS ו-Android."
+    />
+    <meta property="og:title" content="Jobli — המשרה הבאה שלך, בסוויפ אחד" />
+    <meta
+      property="og:description"
+      content="משרות שמותאמות למה שאתם באמת רוצים. סוויפו, שמרו, הגישו מועמדות תוך 30 שניות."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="he_IL" />
+    <meta property="og:image" content="https://job-li.co.il/og-image-candidates.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Jobli — המשרה הבאה שלך, בסוויפ אחד"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="stylesheet" href="./styles/main-jobs.css" />
+  </head>
+  <body>
+    <!-- Particles -->
+    <canvas id="particles"></canvas>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+      <div class="container navbar__inner">
+        <a href="/" class="navbar__logo">
+          <img
+            src="./icon.svg"
+            alt="Jobli"
+            class="navbar__logo-img"
+            width="32"
+            height="32"
+          />
+          <span class="navbar__logo-text">Jobli</span>
+        </a>
+
+        <ul class="navbar__links">
+          <li><a href="#how-it-works">איך זה עובד</a></li>
+          <li><a href="#features">יתרונות</a></li>
+          <li><a href="#testimonials">המלצות</a></li>
+          <li>
+            <a href="/hire" style="color: var(--accent)"
+              >למעסיקים &larr;</a
+            >
+          </li>
+        </ul>
+
+        <div class="navbar__cta">
+          <a
+            href="#download"
+            class="btn btn--primary"
+            style="background: var(--orange)"
+            >הורדת האפליקציה</a
+          >
+        </div>
+
+        <a href="#download" class="btn btn--primary navbar__mobile-cta" style="background: var(--orange)">הורדת האפליקציה</a>
+
+        <button class="navbar__menu-btn" id="menu-btn" aria-label="תפריט">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          >
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="js-hero">
+      <div class="container js-hero__inner">
+        <div class="js-hero__content">
+          <div class="js-hero__badge reveal">
+            <span class="js-hero__badge-dot"></span>
+            חינם ב-iOS ו-Android
+          </div>
+
+          <h1 class="js-hero__title reveal reveal-delay-1">
+            המשרה הבאה שלך לא צריכה<br />
+            <span class="js-hero__title-accent">לקחת 40 שעות למצוא</span>
+          </h1>
+
+          <p class="js-hero__subtitle reveal reveal-delay-2">
+            Jobli מתאימה לכם משרות שבאמת תרצו. סוויפו ביניהן,
+            שמרו את הטובות, הגישו מועמדות בשניות. זהו, זה הכל.
+          </p>
+
+          <div class="js-hero__actions reveal reveal-delay-3">
+            <div class="download-badges" id="download">
+              <a href="#" class="download-badge">
+                <svg
+                  class="download-badge__icon"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"
+                  />
+                </svg>
+                <div class="download-badge__text">
+                  <span class="download-badge__label">הורידו מ-</span>
+                  <span class="download-badge__store">App Store</span>
+                </div>
+              </a>
+              <a href="#" class="download-badge">
+                <svg
+                  class="download-badge__icon"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 1.33-1.89 1.095-2.413-2.413 2.001-2.001zM5.864 2.658L16.8 8.99l-2.302 2.302-8.635-8.635z"
+                  />
+                </svg>
+                <div class="download-badge__text">
+                  <span class="download-badge__label">הורידו מ-</span>
+                  <span class="download-badge__store">Google Play</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="js-hero__mockup reveal reveal-delay-2">
+          <!-- Floating Annotations -->
+          <div class="js-hero__annotations">
+            <div class="floating-annotation floating-annotation--1">
+              <div
+                class="floating-annotation__icon floating-annotation__icon--orange"
+              >
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                </svg>
+              </div>
+              92% התאמה
+            </div>
+            <div class="floating-annotation floating-annotation--2">
+              <div
+                class="floating-annotation__icon floating-annotation__icon--cyan"
+              >
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </div>
+              הוגשה מועמדות
+            </div>
+            <div class="floating-annotation floating-annotation--3">
+              <div
+                class="floating-annotation__icon floating-annotation__icon--green"
+              >
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
+                </svg>
+              </div>
+              נשמר
+            </div>
+          </div>
+
+          <!-- Phone Mockup -->
+          <div class="phone-mockup phone-mockup--lg">
+            <div class="phone-mockup__screen">
+              <div class="phone-mockup__notch"></div>
+              <div class="phone-mockup__status-bar">
+                <span class="phone-mockup__status-bar-time">9:41</span>
+                <span class="phone-mockup__status-bar-icons">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"
+                    />
+                  </svg>
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <rect x="17" y="4" width="3" height="16" rx="1" />
+                    <rect x="12" y="8" width="3" height="12" rx="1" />
+                    <rect x="7" y="12" width="3" height="8" rx="1" />
+                    <rect x="2" y="16" width="3" height="4" rx="1" />
+                  </svg>
+                  <svg
+                    width="16"
+                    height="14"
+                    viewBox="0 0 28 14"
+                    fill="currentColor"
+                  >
+                    <rect
+                      x="0"
+                      y="1"
+                      width="22"
+                      height="12"
+                      rx="2"
+                      stroke="currentColor"
+                      stroke-width="1"
+                      fill="none"
+                    />
+                    <rect x="2" y="3" width="15" height="8" rx="1" />
+                    <rect x="23" y="4" width="3" height="6" rx="1" />
+                  </svg>
+                </span>
+              </div>
+              <div class="phone-mockup__stories-bar">
+                <div class="phone-mockup__stories-segment"></div>
+                <div class="phone-mockup__stories-segment"></div>
+                <div class="phone-mockup__stories-segment"></div>
+                <div class="phone-mockup__stories-segment"></div>
+              </div>
+              <div class="phone-mockup__cards">
+                <!-- Card 1 -->
+                <div
+                  class="job-card job-card--gradient-blue"
+                  style="
+                    background-image: url(&quot;https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80&quot;);
+                  "
+                >
+                  <div class="job-card__hero">
+                    <div class="job-card__header">
+                      <div
+                        class="job-card__company-logo job-card__company-logo--blue"
+                      >
+                        Q
+                      </div>
+                      <div class="job-card__company-info">
+                        <div class="job-card__company-name">QuickShip</div>
+                      </div>
+                      <span class="job-card__match-badge"
+                        ><span class="job-card__match-dot"></span> 92%
+                        התאמה</span
+                      >
+                    </div>
+                    <div class="job-card__title">עובד/ת מחסן</div>
+                    <div class="job-card__salary">₪38 – ₪48 לשעה</div>
+                    <div class="job-card__tags">
+                      <span class="job-card__tag">מהמשרד</span>
+                      <span class="job-card__tag">משרה מלאה</span>
+                      <span class="job-card__tag">ראשון לציון</span>
+                    </div>
+                  </div>
+                  <div class="job-card__body">
+                    <p class="job-card__desc">
+                      איסוף, אריזה ומשלוח הזמנות במרכז הפצה מהיר.
+                      ללא ניסיון קודם — אנחנו מכשירים.
+                    </p>
+                    <div class="job-card__details">
+                      <span class="job-card__detail"
+                        ><span>ניסיון</span
+                        ><span class="job-card__detail-value"
+                          >0-1 שנים</span
+                        ></span
+                      >
+                      <span class="job-card__detail"
+                        ><span>היקף</span
+                        ><span class="job-card__detail-value"
+                          >משרה מלאה</span
+                        ></span
+                      >
+                      <span class="job-card__detail"
+                        ><span>סוג עבודה</span
+                        ><span class="job-card__detail-value"
+                          >מהמשרד</span
+                        ></span
+                      >
+                    </div>
+                    <div class="job-card__benefits">
+                      <span class="job-card__benefit">ביטוח בריאות</span>
+                      <span class="job-card__benefit">שעות נוספות</span>
+                      <span class="job-card__benefit">קרן השתלמות</span>
+                    </div>
+                    <div class="job-card__actions">
+                      <div class="job-card__bookmark">
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"
+                          />
+                        </svg>
+                      </div>
+                      <div class="job-card__apply">הגשת מועמדות</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                  class="job-card job-card--gradient-purple"
+                  style="
+                    background-image: url(&quot;https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&q=80&quot;);
+                  "
+                >
+                  <div class="job-card__hero">
+                    <div class="job-card__header">
+                      <div
+                        class="job-card__company-logo job-card__company-logo--purple"
+                      >
+                        S
+                      </div>
+                      <div class="job-card__company-info">
+                        <div class="job-card__company-name">SparkTrade</div>
+                      </div>
+                      <span class="job-card__match-badge"
+                        ><span class="job-card__match-dot"></span> 88%
+                        התאמה</span
+                      >
+                    </div>
+                    <div class="job-card__title">חשמלאי/ת</div>
+                    <div class="job-card__salary">₪55 – ₪75 לשעה</div>
+                    <div class="job-card__tags">
+                      <span class="job-card__tag">מהמשרד</span>
+                      <span class="job-card__tag">משרה מלאה</span>
+                      <span class="job-card__tag">תל אביב</span>
+                    </div>
+                  </div>
+                  <div class="job-card__body">
+                    <p class="job-card__desc">
+                      התקנה ותחזוקה של מערכות חשמל במבנים מסחריים.
+                      רישיון חשמלאי מוסמך — יתרון.
+                    </p>
+                    <div class="job-card__details">
+                      <span class="job-card__detail"
+                        ><span>ניסיון</span
+                        ><span class="job-card__detail-value"
+                          >3+ שנים</span
+                        ></span
+                      >
+                      <span class="job-card__detail"
+                        ><span>היקף</span
+                        ><span class="job-card__detail-value"
+                          >משרה מלאה</span
+                        ></span
+                      >
+                      <span class="job-card__detail"
+                        ><span>סוג עבודה</span
+                        ><span class="job-card__detail-value"
+                          >מהמשרד</span
+                        ></span
+                      >
+                    </div>
+                    <div class="job-card__benefits">
+                      <span class="job-card__benefit">הטבות ועד</span>
+                      <span class="job-card__benefit">תקציב כלי עבודה</span>
+                    </div>
+                    <div class="job-card__actions">
+                      <div class="job-card__bookmark">
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"
+                          />
+                        </svg>
+                      </div>
+                      <div class="job-card__apply">הגשת מועמדות</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                  class="job-card job-card--gradient-green"
+                  style="
+                    background-image: url(&quot;https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80&quot;);
+                  "
+                >
+                  <div class="job-card__hero">
+                    <div class="job-card__header">
+                      <div
+                        class="job-card__company-logo job-card__company-logo--green"
+                      >
+                        F
+                      </div>
+                      <div class="job-card__company-info">
+                        <div class="job-card__company-name">FreshFleet</div>
+                      </div>
+                      <span class="job-card__match-badge"
+                        ><span class="job-card__match-dot"></span> 85%
+                        התאמה</span
+                      >
+                    </div>
+                    <div class="job-card__title">נהג/ת משלוחים</div>
+                    <div class="job-card__salary">₪35 – ₪45 לשעה</div>
+                    <div class="job-card__tags">
+                      <span class="job-card__tag">גמיש</span>
+                      <span class="job-card__tag">משרה מלאה</span>
+                      <span class="job-card__tag">גוש דן</span>
+                    </div>
+                  </div>
+                  <div class="job-card__body">
+                    <p class="job-card__desc">
+                      חלוקת חבילות ברחבי המטרופולין. רישיון נהיגה
+                      בתוקף. טיפים מעל השכר.
+                    </p>
+                    <div class="job-card__details">
+                      <span class="job-card__detail"
+                        ><span>ניסיון</span
+                        ><span class="job-card__detail-value"
+                          >1+ שנים</span
+                        ></span
+                      >
+                      <span class="job-card__detail"
+                        ><span>היקף</span
+                        ><span class="job-card__detail-value"
+                          >משרה מלאה</span
+                        ></span
+                      >
+                      <span class="job-card__detail"
+                        ><span>סוג עבודה</span
+                        ><span class="job-card__detail-value"
+                          >גמיש</span
+                        ></span
+                      >
+                    </div>
+                    <div class="job-card__benefits">
+                      <span class="job-card__benefit">כרטיס דלק</span>
+                      <span class="job-card__benefit">סלולר</span>
+                      <span class="job-card__benefit">תשלום שבועי</span>
+                    </div>
+                    <div class="job-card__actions">
+                      <div class="job-card__bookmark">
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"
+                          />
+                        </svg>
+                      </div>
+                      <div class="job-card__apply">הגשת מועמדות</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div
+                  class="job-card job-card--gradient-orange"
+                  style="
+                    background-image: url(&quot;https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&q=80&quot;);
+                  "
+                >
+                  <div class="job-card__hero">
+                    <div class="job-card__header">
+                      <div
+                        class="job-card__company-logo job-card__company-logo--red"
+                      >
+                        C
+                      </div>
+                      <div class="job-card__company-info">
+                        <div class="job-card__company-name">CoolAir</div>
+                      </div>
+                      <span class="job-card__match-badge"
+                        ><span class="job-card__match-dot"></span> 82%
+                        התאמה</span
+                      >
+                    </div>
+                    <div class="job-card__title">טכנאי/ת מיזוג</div>
+                    <div class="job-card__salary">₪50 – ₪68 לשעה</div>
+                    <div class="job-card__tags">
+                      <span class="job-card__tag">מהמשרד</span>
+                      <span class="job-card__tag">משרה מלאה</span>
+                      <span class="job-card__tag">חיפה</span>
+                    </div>
+                  </div>
+                  <div class="job-card__body">
+                    <p class="job-card__desc">
+                      תחזוקה ותיקון מערכות חימום וקירור באתרי מגורים
+                      ומסחר.
+                    </p>
+                    <div class="job-card__details">
+                      <span class="job-card__detail"
+                        ><span>ניסיון</span
+                        ><span class="job-card__detail-value"
+                          >2+ שנים</span
+                        ></span
+                      >
+                      <span class="job-card__detail"
+                        ><span>היקף</span
+                        ><span class="job-card__detail-value"
+                          >משרה מלאה</span
+                        ></span
+                      >
+                      <span class="job-card__detail"
+                        ><span>סוג עבודה</span
+                        ><span class="job-card__detail-value"
+                          >מהמשרד</span
+                        ></span
+                      >
+                    </div>
+                    <div class="job-card__benefits">
+                      <span class="job-card__benefit">רכב חברה</span>
+                      <span class="job-card__benefit">תוספת הסמכה</span>
+                    </div>
+                    <div class="job-card__actions">
+                      <div class="job-card__bookmark">
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"
+                          />
+                        </svg>
+                      </div>
+                      <div class="job-card__apply">הגשת מועמדות</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section js-how-it-works" id="how-it-works">
+      <div
+        class="blob blob--orange"
+        style="
+          width: 300px;
+          height: 300px;
+          top: -60px;
+          right: -70px;
+          opacity: 0.18;
+        "
+      ></div>
+      <div
+        class="blob blob--cyan"
+        style="
+          width: 250px;
+          height: 250px;
+          bottom: -50px;
+          left: -60px;
+          opacity: 0.15;
+        "
+      ></div>
+      <div class="container">
+        <div class="section__header">
+          <p class="section__label reveal">
+            <span class="section__label-icon" aria-hidden="true"><svg viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 977.067V1.37076C161.691 -12.6483 220.253 84.3169 229.322 134.552V777.298H454.757L349.813 977.067H0Z" fill="currentColor"/><path d="M1200 456.99V1200H1126.15C1020.43 1183.18 983.631 1094.86 978.448 1052.8V947.657C791.881 1026.16 667.922 963.645 608.324 921.588L752.136 767.378C914.474 797.44 978.448 729.573 978.448 670.781V492.038C970.923 298.616 699.967 325.763 682.173 427.416L523.094 507.308L617.176 573.478C590.833 607.412 534.383 682.066 511.804 702.426C489.224 722.786 470.99 737.004 460.625 739.34C242.964 52.406 1126.15 -54.7061 1200 456.99Z" fill="currentColor"/><path d="M446.984 777.326L342.04 977.098C361.474 977.098 429.882 972.892 501.4 961.677C572.917 950.462 668.533 888.077 699.627 849.524L831.779 646.248L928.949 688.305L866.76 397.409L583.023 509.562L668.533 562.133C624.482 622.883 536.381 746.484 536.381 754.896C536.381 763.307 475.488 772.653 446.984 777.326Z" fill="#fb923c"/></svg></span>
+            איך זה עובד
+          </p>
+          <h2 class="section__title reveal reveal-delay-1">
+            מההורדה ועד ההגשה — תוך פחות מ-3 דקות
+          </h2>
+          <p class="section__desc reveal reveal-delay-2">
+            בלי קורות חיים. בלי מכתבי מוטיבציה. בלי טפסים של 45 דקות.
+          </p>
+        </div>
+
+        <div class="js-steps">
+          <div class="js-step reveal">
+            <div class="js-step__number">1</div>
+            <h3 class="js-step__title">ספרו לנו מה אתם רוצים</h3>
+            <p class="js-step__desc">
+              בחרו תפקיד, מיקום, טווח שכר ואיך אתם אוהבים לעבוד.
+              לוקח בערך 90 שניות.
+            </p>
+          </div>
+
+          <div class="js-step reveal reveal-delay-1">
+            <div class="js-step__number">2</div>
+            <h3 class="js-step__title">דפדפו בין ההתאמות</h3>
+            <p class="js-step__desc">
+              אנחנו מציגים לכם משרות שמתאימות לפרופיל שלכם. סוויפו ימינה
+              על מה שמוצא חן, שמאלה על מה שלא. ככל שתסוויפו יותר,
+              הפיד משתפר.
+            </p>
+          </div>
+
+          <div class="js-step reveal reveal-delay-2">
+            <div class="js-step__number">3</div>
+            <h3 class="js-step__title">לחצו להגיש</h3>
+            <p class="js-step__desc">
+              ראיתם משרה שמתאימה? לחיצה אחת שולחת את הפרופיל שלכם לחברה.
+              סיימתם. עוברים למשרה הבאה.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section js-features" id="features">
+      <div
+        class="blob blob--cyan"
+        style="
+          width: 280px;
+          height: 280px;
+          top: -50px;
+          left: -60px;
+          opacity: 0.15;
+        "
+      ></div>
+      <div
+        class="blob blob--orange"
+        style="
+          width: 260px;
+          height: 260px;
+          bottom: -40px;
+          right: -50px;
+          opacity: 0.18;
+        "
+      ></div>
+      <div class="container">
+        <div class="section__header">
+          <p class="section__label reveal">
+            <span class="section__label-icon" aria-hidden="true"><svg viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 977.067V1.37076C161.691 -12.6483 220.253 84.3169 229.322 134.552V777.298H454.757L349.813 977.067H0Z" fill="currentColor"/><path d="M1200 456.99V1200H1126.15C1020.43 1183.18 983.631 1094.86 978.448 1052.8V947.657C791.881 1026.16 667.922 963.645 608.324 921.588L752.136 767.378C914.474 797.44 978.448 729.573 978.448 670.781V492.038C970.923 298.616 699.967 325.763 682.173 427.416L523.094 507.308L617.176 573.478C590.833 607.412 534.383 682.066 511.804 702.426C489.224 722.786 470.99 737.004 460.625 739.34C242.964 52.406 1126.15 -54.7061 1200 456.99Z" fill="currentColor"/><path d="M446.984 777.326L342.04 977.098C361.474 977.098 429.882 972.892 501.4 961.677C572.917 950.462 668.533 888.077 699.627 849.524L831.779 646.248L928.949 688.305L866.76 397.409L583.023 509.562L668.533 562.133C624.482 622.883 536.381 746.484 536.381 754.896C536.381 763.307 475.488 772.653 446.984 777.326Z" fill="#fb923c"/></svg></span>
+            למה Jobli
+          </p>
+          <h2 class="section__title reveal reveal-delay-1">
+            חיפוש עבודה, בלי כל מה שאתם שונאים בו
+          </h2>
+          <p class="section__desc reveal reveal-delay-2">
+            לקחנו את החלקים הכי גרועים בחיפוש עבודה והוצאנו אותם.
+          </p>
+        </div>
+
+        <div class="js-features-grid">
+          <div class="js-feature-card reveal">
+            <div class="js-feature-card__icon">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+              </svg>
+            </div>
+            <h3 class="js-feature-card__title">ציוני התאמה</h3>
+            <p class="js-feature-card__desc">
+              כל משרה מראה כמה היא מתאימה לכם. תפסיקו לנחש אם אתם
+              מתאימים — הציון אומר לכם.
+            </p>
+          </div>
+
+          <div class="js-feature-card reveal reveal-delay-1">
+            <div class="js-feature-card__icon">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                <line x1="12" y1="8" x2="12" y2="16" />
+                <line x1="8" y1="12" x2="16" y2="12" />
+              </svg>
+            </div>
+            <h3 class="js-feature-card__title">סוויפו לגלות</h3>
+            <p class="js-feature-card__desc">
+              גללו בין משרות כמו שאתם גוללים בתוכן. ימינה לשמור,
+              שמאלה לדלג. הפיד לומד מה אתם אוהבים.
+            </p>
+          </div>
+
+          <div class="js-feature-card reveal reveal-delay-2">
+            <div class="js-feature-card__icon">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </div>
+            <h3 class="js-feature-card__title">הגשה בלחיצה</h3>
+            <p class="js-feature-card__desc">
+              לחצו על הגשה, והפרופיל שלכם מגיע ישר לצוות הגיוס. בלי
+              טפסים למלא. בלי מכתב מוטיבציה להילחץ ממנו.
+            </p>
+          </div>
+
+          <div class="js-feature-card reveal">
+            <div class="js-feature-card__icon">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
+              </svg>
+            </div>
+            <h3 class="js-feature-card__title">שמרו להמשך</h3>
+            <p class="js-feature-card__desc">
+              לא מוכנים להגיש? שמרו. הסימניות מסונכרנות בין כל
+              המכשירים שלכם כדי ששום דבר לא יאבד.
+            </p>
+          </div>
+
+          <div class="js-feature-card reveal reveal-delay-1">
+            <div class="js-feature-card__icon">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="12" y1="1" x2="12" y2="23" />
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+              </svg>
+            </div>
+            <h3 class="js-feature-card__title">שכר מראש</h3>
+            <p class="js-feature-card__desc">
+              כל משרה מציגה את טווח השכר לפני שמגישים. לא עוד להגיע
+              לשלב 3 ולגלות שזה חצי ממה שציפיתם.
+            </p>
+          </div>
+
+          <div class="js-feature-card reveal reveal-delay-2">
+            <div class="js-feature-card__icon">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+            <h3 class="js-feature-card__title">רק משרות אמיתיות</h3>
+            <p class="js-feature-card__desc">
+              כל מודעה היא מחברה מאומתת. בלי ספאם של מגייסים, בלי
+              כפילויות, בלי משרות רפאים.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="section">
+      <div class="container">
+        <div class="stats">
+          <div class="stat reveal">
+            <div class="stat__number" data-target="30" data-suffix=" שנ׳">0</div>
+            <div class="stat__label">להגשת מועמדות</div>
+          </div>
+          <div class="stat reveal reveal-delay-1">
+            <div class="stat__number" data-target="85" data-suffix="%">0</div>
+            <div class="stat__label">דיוק התאמה</div>
+          </div>
+          <div class="stat reveal reveal-delay-2">
+            <div class="stat__number" data-target="10" data-suffix="K+">0</div>
+            <div class="stat__label">משרות וממשיכים לגדול</div>
+          </div>
+          <div class="stat reveal reveal-delay-3">
+            <div class="stat__number" data-target="0" data-suffix="">0</div>
+            <div class="stat__label">קורות חיים נדרשים</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" id="testimonials">
+      <div
+        class="blob blob--cyan"
+        style="
+          width: 280px;
+          height: 280px;
+          top: -60px;
+          right: -40px;
+          opacity: 0.18;
+        "
+      ></div>
+      <div
+        class="blob blob--orange"
+        style="
+          width: 300px;
+          height: 300px;
+          bottom: -70px;
+          left: -60px;
+          opacity: 0.15;
+        "
+      ></div>
+      <div class="container">
+        <div class="section__header">
+          <p class="section__label reveal">
+            <span class="section__label-icon" aria-hidden="true"><svg viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 977.067V1.37076C161.691 -12.6483 220.253 84.3169 229.322 134.552V777.298H454.757L349.813 977.067H0Z" fill="currentColor"/><path d="M1200 456.99V1200H1126.15C1020.43 1183.18 983.631 1094.86 978.448 1052.8V947.657C791.881 1026.16 667.922 963.645 608.324 921.588L752.136 767.378C914.474 797.44 978.448 729.573 978.448 670.781V492.038C970.923 298.616 699.967 325.763 682.173 427.416L523.094 507.308L617.176 573.478C590.833 607.412 534.383 682.066 511.804 702.426C489.224 722.786 470.99 737.004 460.625 739.34C242.964 52.406 1126.15 -54.7061 1200 456.99Z" fill="currentColor"/><path d="M446.984 777.326L342.04 977.098C361.474 977.098 429.882 972.892 501.4 961.677C572.917 950.462 668.533 888.077 699.627 849.524L831.779 646.248L928.949 688.305L866.76 397.409L583.023 509.562L668.533 562.133C624.482 622.883 536.381 746.484 536.381 754.896C536.381 763.307 475.488 772.653 446.984 777.326Z" fill="#fb923c"/></svg></span>
+            דברים אמיתיים
+          </p>
+          <h2 class="section__title reveal reveal-delay-1">
+            אל תסמכו על המילה שלנו
+          </h2>
+          <p class="section__desc reveal reveal-delay-2">
+            אנשים שמצאו עבודה דרך Jobli, במילים שלהם.
+          </p>
+        </div>
+
+        <div class="js-testimonials-grid">
+          <div class="js-testimonial-card reveal">
+            <div class="js-testimonial-card__stars">
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+            </div>
+            <p class="js-testimonial-card__text">
+              "הגשתי מועמדות ל-12 משרות בהפסקת צהריים. עד יום שישי כבר
+              היו לי שני ראיונות. ככה זה צריך לעבוד."
+            </p>
+            <div class="js-testimonial-card__author">
+              <div class="js-testimonial-card__avatar">SR</div>
+              <div>
+                <div class="js-testimonial-card__name">Sarah R.</div>
+                <div class="js-testimonial-card__role">מפתחת Frontend</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="js-testimonial-card reveal reveal-delay-1">
+            <div class="js-testimonial-card__stars">
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+            </div>
+            <p class="js-testimonial-card__text">
+              "ציוני ההתאמה שינו לי את המשחק. הפסקתי להגיש למשרות שאין
+              לי סיכוי בהן ומצאתי משהו מעולה תוך שבועיים."
+            </p>
+            <div class="js-testimonial-card__author">
+              <div class="js-testimonial-card__avatar">MK</div>
+              <div>
+                <div class="js-testimonial-card__name">Michael K.</div>
+                <div class="js-testimonial-card__role">מנהל מוצר</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="js-testimonial-card reveal reveal-delay-2">
+            <div class="js-testimonial-card__stars">
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+            </div>
+            <p class="js-testimonial-card__text">
+              "פרופיל אחד, לחיצה אחת. נגמרו הימים של מילוי אותו טופס
+              ב-20 אתרים שונים. סוף סוף מישהו פתר את זה."
+            </p>
+            <div class="js-testimonial-card__author">
+              <div class="js-testimonial-card__avatar">LD</div>
+              <div>
+                <div class="js-testimonial-card__name">Lisa D.</div>
+                <div class="js-testimonial-card__role">מעצבת UX</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="js-cta-box reveal">
+          <div class="js-cta-box__watermark" aria-hidden="true">
+            <svg
+              viewBox="0 0 1200 1200"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 977.067V1.37076C161.691 -12.6483 220.253 84.3169 229.322 134.552V777.298H454.757L349.813 977.067H0Z"
+                fill="white"
+              />
+              <path
+                d="M1200 456.99V1200H1126.15C1020.43 1183.18 983.631 1094.86 978.448 1052.8V947.657C791.881 1026.16 667.922 963.645 608.324 921.588L752.136 767.378C914.474 797.44 978.448 729.573 978.448 670.781V492.038C970.923 298.616 699.967 325.763 682.173 427.416L523.094 507.308L617.176 573.478C590.833 607.412 534.383 682.066 511.804 702.426C489.224 722.786 470.99 737.004 460.625 739.34C242.964 52.406 1126.15 -54.7061 1200 456.99Z"
+                fill="white"
+              />
+              <path
+                d="M446.984 777.326L342.04 977.098C361.474 977.098 429.882 972.892 501.4 961.677C572.917 950.462 668.533 888.077 699.627 849.524L831.779 646.248L928.949 688.305L866.76 397.409L583.023 509.562L668.533 562.133C624.482 622.883 536.381 746.484 536.381 754.896C536.381 763.307 475.488 772.653 446.984 777.326Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+          <h2 class="js-cta-box__title">המשרה הבאה שלכם כבר כאן</h2>
+          <p class="js-cta-box__desc">
+            הורידו את Jobli, הקימו פרופיל תוך 90 שניות, והתחילו לראות
+            משרות שמתאימות למה שאתם באמת רוצים.
+          </p>
+          <div class="js-cta-box__actions">
+            <div class="download-badges">
+              <a href="#" class="download-badge">
+                <svg
+                  class="download-badge__icon"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"
+                  />
+                </svg>
+                <div class="download-badge__text">
+                  <span class="download-badge__label">הורידו מ-</span>
+                  <span class="download-badge__store">App Store</span>
+                </div>
+              </a>
+              <a href="#" class="download-badge">
+                <svg
+                  class="download-badge__icon"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 1.33-1.89 1.095-2.413-2.413 2.001-2.001zM5.864 2.658L16.8 8.99l-2.302 2.302-8.635-8.635z"
+                  />
+                </svg>
+                <div class="download-badge__text">
+                  <span class="download-badge__label">הורידו מ-</span>
+                  <span class="download-badge__store">Google Play</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__left">
+          <div class="footer__wordmark">
+            <span class="footer__wordmark-icon" aria-hidden="true">
+              <svg
+                viewBox="0 0 1200 1200"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 977.067V1.37076C161.691 -12.6483 220.253 84.3169 229.322 134.552V777.298H454.757L349.813 977.067H0Z"
+                  fill="#06B6D4"
+                />
+                <path
+                  d="M1200 456.99V1200H1126.15C1020.43 1183.18 983.631 1094.86 978.448 1052.8V947.657C791.881 1026.16 667.922 963.645 608.324 921.588L752.136 767.378C914.474 797.44 978.448 729.573 978.448 670.781V492.038C970.923 298.616 699.967 325.763 682.173 427.416L523.094 507.308L617.176 573.478C590.833 607.412 534.383 682.066 511.804 702.426C489.224 722.786 470.99 737.004 460.625 739.34C242.964 52.406 1126.15 -54.7061 1200 456.99Z"
+                  fill="#06B6D4"
+                />
+                <path
+                  d="M446.984 777.326L342.04 977.098C361.474 977.098 429.882 972.892 501.4 961.677C572.917 950.462 668.533 888.077 699.627 849.524L831.779 646.248L928.949 688.305L866.76 397.409L583.023 509.562L668.533 562.133C624.482 622.883 536.381 746.484 536.381 754.896C536.381 763.307 475.488 772.653 446.984 777.326Z"
+                  fill="url(#footer-grad)"
+                />
+                <defs>
+                  <linearGradient
+                    id="footer-grad"
+                    x1="635.495"
+                    y1="397.409"
+                    x2="635.495"
+                    y2="977.098"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#FB923C" />
+                    <stop offset="1" stop-color="#F97316" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </span>
+            <span class="footer__wordmark-text">Jobli</span>
+          </div>
+          <span class="footer__copy">&copy; 2026</span>
+        </div>
+        <ul class="footer__links">
+          <li><a href="/hire">למעסיקים</a></li>
+          <li><a href="/privacy">פרטיות</a></li>
+          <li><a href="/terms">תנאי שימוש</a></li>
+          <li><a href="/contact">צרו קשר</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script type="module" src="./scripts/main-jobs.js"></script>
+  </body>
+</html>

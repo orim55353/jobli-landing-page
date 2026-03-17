@@ -1,0 +1,555 @@
+/* ─── Splash Hero (Split Screen) ─── */
+.splash-hero {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+}
+
+.splash-hero__half {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 180px 48px 80px;
+  position: relative;
+  transition: flex 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+
+/* ─── Hover expand effect ─── */
+.splash-hero--hover-left .splash-hero__half--left { flex: 1.15; }
+.splash-hero--hover-left .splash-hero__half--right { flex: 0.85; }
+.splash-hero--hover-right .splash-hero__half--right { flex: 1.15; }
+.splash-hero--hover-right .splash-hero__half--left { flex: 0.85; }
+
+/* ─── Left (Employers - Cyan) ─── */
+.splash-hero__half--left {
+  background: linear-gradient(135deg, #ecfeff 0%, #f0fdfa 50%, #ffffff 100%);
+}
+
+.splash-hero__half--left::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(var(--accent-rgb), 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ─── Right (Job Seekers - Orange) ─── */
+.splash-hero__half--right {
+  background: linear-gradient(135deg, #fff7ed 0%, #fffbeb 50%, #ffffff 100%);
+}
+
+.splash-hero__half--right::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(var(--orange-rgb), 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ─── Divider ─── */
+.splash-hero__divider {
+  position: relative;
+  flex: 0 0 1px;
+  background: var(--border);
+  z-index: 10;
+}
+
+.splash-hero__divider-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 56px;
+  height: 56px;
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  z-index: 11;
+}
+
+.splash-hero__divider-logo img {
+  width: 32px;
+  height: 32px;
+}
+
+/* ─── Content ─── */
+.splash-hero__content {
+  max-width: 420px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width: 769px) {
+  .splash-hero__content {
+    display: grid;
+    grid-template-rows: auto auto auto 1fr auto;
+    justify-items: center;
+    flex: 1;
+    width: 100%;
+  }
+
+  .splash-hero__mockup-thumb {
+    align-self: center;
+  }
+}
+
+.splash-hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.splash-hero__half--left .splash-hero__eyebrow {
+  color: var(--accent);
+}
+
+.splash-hero__half--right .splash-hero__eyebrow {
+  color: var(--orange-hover);
+}
+
+.splash-hero__headline {
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 700;
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  color: var(--text);
+}
+
+.splash-hero__tagline {
+  font-size: 16px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+/* ─── Mockup Thumbnail ─── */
+.splash-hero__mockup-thumb {
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ─── Scaled Mockup Wrappers (match inner page designs) ─── */
+.splash-mockup-wrap--browser {
+  width: 380px;
+  height: 280px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.splash-mockup-wrap--browser .mockup-browser {
+  box-shadow: none;
+  border-radius: 12px;
+}
+
+/* Compact overrides for splash browser mockup */
+.splash-mockup-wrap--browser .mockup-sidebar {
+  width: 120px;
+  padding: 12px 0;
+}
+
+.splash-mockup-wrap--browser .mockup-sidebar__logo {
+  padding: 0 10px 12px;
+  margin-bottom: 8px;
+  gap: 6px;
+}
+
+.splash-mockup-wrap--browser .mockup-sidebar__logo-img {
+  width: 18px;
+  height: 18px;
+}
+
+.splash-mockup-wrap--browser .mockup-sidebar__logo-text {
+  font-size: 12px;
+}
+
+.splash-mockup-wrap--browser .mockup-sidebar__nav {
+  padding: 0 6px;
+}
+
+.splash-mockup-wrap--browser .mockup-nav-item {
+  padding: 5px 8px;
+  font-size: 10px;
+  gap: 6px;
+}
+
+.splash-mockup-wrap--browser .mockup-nav-item__icon {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+}
+
+.splash-mockup-wrap--browser .mockup-browser__toolbar {
+  padding: 8px 10px;
+  gap: 8px;
+}
+
+.splash-mockup-wrap--browser .mockup-browser__dot {
+  width: 7px;
+  height: 7px;
+}
+
+.splash-mockup-wrap--browser .mockup-browser__dots {
+  gap: 4px;
+}
+
+.splash-mockup-wrap--browser .mockup-browser__url {
+  font-size: 10px;
+  padding: 3px 8px;
+}
+
+.splash-mockup-wrap--browser .mockup-browser__content {
+  min-height: 250px;
+}
+
+.splash-mockup-wrap--browser .mockup-main {
+  padding: 12px;
+  gap: 8px;
+}
+
+.splash-mockup-wrap--browser .mockup-main__header {
+  font-size: 12px;
+}
+
+.splash-mockup-wrap--browser .mockup-kpi-row {
+  gap: 6px;
+}
+
+.splash-mockup-wrap--browser .mockup-kpi {
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.splash-mockup-wrap--browser .mockup-kpi__label {
+  font-size: 7px;
+  letter-spacing: 0.3px;
+  margin-bottom: 2px;
+}
+
+.splash-mockup-wrap--browser .mockup-kpi__value {
+  font-size: 14px;
+}
+
+.splash-mockup-wrap--browser .mockup-kpi__change {
+  font-size: 7px;
+}
+
+.splash-mockup-wrap--browser .mockup-table {
+  border-radius: 8px;
+}
+
+.splash-mockup-wrap--browser .mockup-table__header {
+  padding: 6px 10px;
+  font-size: 7px;
+}
+
+.splash-mockup-wrap--browser .mockup-table__row {
+  padding: 6px 10px;
+  font-size: 9px;
+}
+
+.splash-mockup-wrap--browser .mockup-table__status {
+  font-size: 7px;
+  padding: 1px 6px;
+}
+
+.splash-mockup-wrap--phone {
+  position: relative;
+  width: 200px;
+  height: 413px;
+}
+
+.splash-mockup-wrap--phone .phone-mockup {
+  transform: scale(0.59);
+  transform-origin: top center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -170px;
+}
+
+/* ─── Floating Annotations (splash page) ─── */
+.splash-annotations {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.floating-annotation {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+  animation: splash-float 3s ease-in-out infinite;
+}
+
+.floating-annotation__icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.floating-annotation__icon svg {
+  width: 11px;
+  height: 11px;
+}
+
+.floating-annotation__icon--orange {
+  background: var(--orange-light);
+  color: var(--orange);
+}
+
+.floating-annotation__icon--cyan {
+  background: var(--accent-light);
+  color: var(--accent);
+}
+
+.floating-annotation__icon--green {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.floating-annotation--1 {
+  top: 8%;
+  left: -50px;
+  animation-delay: 0s;
+}
+
+.floating-annotation--2 {
+  top: 42%;
+  right: -40px;
+  animation-delay: 1s;
+}
+
+.floating-annotation--3 {
+  bottom: 18%;
+  left: -36px;
+  animation-delay: 2s;
+}
+
+@keyframes splash-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+
+.splash-hero--hover-left .splash-hero__half--left .splash-hero__mockup-thumb {
+  transform: scale(1.08);
+}
+
+.splash-hero--hover-right .splash-hero__half--right .splash-hero__mockup-thumb {
+  transform: scale(1.08);
+}
+
+/* ─── CTA Buttons ─── */
+.splash-hero__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 12px;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.splash-hero__cta--cyan {
+  background: var(--accent);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(var(--accent-rgb), 0.3);
+}
+
+.splash-hero__cta--cyan:hover {
+  background: #0e7490;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(var(--accent-rgb), 0.4);
+}
+
+.splash-hero__cta--orange {
+  background: var(--orange);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(var(--orange-rgb), 0.3);
+}
+
+.splash-hero__cta--orange:hover {
+  background: var(--orange-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(var(--orange-rgb), 0.4);
+}
+
+/* ─── Splash Navbar (simplified) ─── */
+.navbar--splash {
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom-color: var(--border);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+.navbar--splash .navbar__links { display: none; }
+.navbar--splash .navbar__inner { justify-content: space-between; }
+
+/* ─── Splash Footer ─── */
+.splash-footer {
+  padding: 24px 0;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.splash-footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.splash-footer__copy {
+  font-size: 13px;
+  color: var(--text-dim);
+}
+
+.splash-footer__links {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+}
+
+.splash-footer__links a {
+  font-size: 13px;
+  color: var(--text-dim);
+  transition: color 0.2s;
+}
+
+.splash-footer__links a:hover { color: var(--text); }
+
+/* ─── Responsive: Mobile stack ─── */
+@media (max-width: 768px) {
+  .splash-hero {
+    flex-direction: column;
+  }
+
+  .splash-hero__half {
+    min-height: 50vh;
+    padding: 100px 24px 60px;
+  }
+
+  .splash-hero__half--right {
+    order: -2;
+  }
+
+  .splash-hero__divider {
+    flex: 0 0 1px;
+    width: 100%;
+    height: 1px;
+    order: -1;
+  }
+
+  .splash-hero__headline {
+    font-size: clamp(28px, 6vw, 36px);
+  }
+
+  .splash-hero__mockup-thumb {
+    margin-bottom: 24px;
+  }
+
+  .splash-mockup-wrap--browser {
+    width: 300px;
+    height: 220px;
+  }
+
+  .splash-mockup-wrap--browser .mockup-sidebar {
+    width: 90px;
+  }
+
+  .splash-mockup-wrap--browser .mockup-nav-item {
+    font-size: 8px;
+    padding: 4px 6px;
+  }
+
+  .splash-mockup-wrap--browser .mockup-sidebar__logo-text {
+    font-size: 10px;
+  }
+
+  .splash-mockup-wrap--phone {
+    width: 180px;
+    height: 370px;
+  }
+
+  .splash-mockup-wrap--phone .phone-mockup {
+    transform: scale(0.53);
+    margin-left: -170px;
+  }
+
+  .floating-annotation {
+    font-size: 9px;
+    padding: 4px 8px;
+  }
+
+  .floating-annotation--1 { left: -20px; }
+  .floating-annotation--2 { right: -16px; }
+  .floating-annotation--3 { left: -14px; }
+
+  .navbar--splash {
+    padding: 12px 0;
+  }
+
+  .navbar--splash .navbar__cta {
+    position: static;
+    width: auto;
+    flex-direction: row;
+    padding: 0;
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+  }
+
+  .navbar--splash .navbar__logo {
+    position: static;
+  }
+
+  .navbar--splash .navbar__inner {
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,243 @@
+/* ═══════════════════════════════════════════════════════
+   RTL (Right-to-Left) Overrides for Hebrew
+   Applied via [dir="rtl"] on <html> element.
+   Only overrides explicit LTR-directional CSS.
+   ═══════════════════════════════════════════════════════ */
+
+
+/* ─── Base ─── */
+
+/* Particles canvas pinned to left — no change needed (full-width) */
+
+
+/* ─── Navbar ─── */
+
+/* Mobile menu slides from right — in RTL it should slide from left */
+@media (max-width: 768px) {
+  [dir="rtl"] .navbar__links {
+    right: auto;
+    left: 0;
+    transform: translateX(-100%);
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.1);
+  }
+
+  [dir="rtl"] .navbar__links.open {
+    transform: translateX(0);
+  }
+
+  [dir="rtl"] .navbar__cta {
+    right: auto;
+    left: 0;
+    transform: translateX(-100%);
+  }
+
+  [dir="rtl"] .navbar__cta.open {
+    transform: translateX(0);
+  }
+}
+
+
+/* ─── Footer ─── */
+
+[dir="rtl"] .footer__copy {
+  margin-left: 0;
+  margin-right: 4px;
+}
+
+
+/* ─── CTA ─── */
+
+[dir="rtl"] .cta-box__watermark {
+  right: auto;
+  left: -40px;
+}
+
+@media (max-width: 768px) {
+  [dir="rtl"] .cta-box__watermark {
+    right: auto;
+    left: -50px;
+  }
+}
+
+
+/* ─── Bento / Analytics Funnel ─── */
+
+[dir="rtl"] .funnel-row__label {
+  text-align: left;
+}
+
+
+/* ─── Contact ─── */
+
+/* Form select dropdown arrow — reposition from right to left */
+[dir="rtl"] .form-select {
+  background-position: left 12px center;
+  padding-right: 14px;
+  padding-left: 36px;
+}
+
+
+/* ─── Legal ─── */
+
+[dir="rtl"] .legal-content ul {
+  padding-left: 0;
+  padding-right: 24px;
+}
+
+
+/* ─── Product Mockups ─── */
+
+/* Sidebar nav items text alignment */
+[dir="rtl"] .mockup-nav-item {
+  text-align: right;
+}
+
+
+/* ─── Splash Page ─── */
+
+/* Swap the employer/job-seeker halves so employer is on the right
+   and job seeker is on the left (mirrored from LTR) */
+[dir="rtl"] .splash-hero {
+  flex-direction: row-reverse;
+}
+
+/* Decorative blob positions on the halves need swapping */
+[dir="rtl"] .splash-hero__half--left::before {
+  right: auto;
+  left: -100px;
+}
+
+[dir="rtl"] .splash-hero__half--right::before {
+  left: auto;
+  right: -100px;
+}
+
+/* Hover expand directions swap */
+[dir="rtl"] .splash-hero--hover-left .splash-hero__half--left { flex: 1.15; }
+[dir="rtl"] .splash-hero--hover-left .splash-hero__half--right { flex: 0.85; }
+[dir="rtl"] .splash-hero--hover-right .splash-hero__half--right { flex: 1.15; }
+[dir="rtl"] .splash-hero--hover-right .splash-hero__half--left { flex: 0.85; }
+
+/* Floating annotations: swap left/right positions */
+[dir="rtl"] .splash-annotations .floating-annotation--1 {
+  left: auto;
+  right: -50px;
+}
+
+[dir="rtl"] .splash-annotations .floating-annotation--2 {
+  right: auto;
+  left: -40px;
+}
+
+[dir="rtl"] .splash-annotations .floating-annotation--3 {
+  left: auto;
+  right: -36px;
+}
+
+/* Phone mockup margin-left for centering offset */
+[dir="rtl"] .splash-mockup-wrap--phone .phone-mockup {
+  left: auto;
+  right: 50%;
+  margin-left: 0;
+  margin-right: -170px;
+}
+
+@media (max-width: 768px) {
+  /* On mobile the splash stacks vertically — no row-reverse needed */
+  [dir="rtl"] .splash-hero {
+    flex-direction: column;
+  }
+
+  [dir="rtl"] .splash-annotations .floating-annotation--1 {
+    right: -20px;
+  }
+
+  [dir="rtl"] .splash-annotations .floating-annotation--2 {
+    left: -16px;
+  }
+
+  [dir="rtl"] .splash-annotations .floating-annotation--3 {
+    right: -14px;
+  }
+
+  [dir="rtl"] .splash-mockup-wrap--phone .phone-mockup {
+    margin-right: -170px;
+  }
+}
+
+
+/* ─── Job Seeker Page ─── */
+
+/* Hero layout: content + mockup side by side — reverse for RTL */
+[dir="rtl"] .js-hero__inner {
+  flex-direction: row-reverse;
+}
+
+/* Floating annotations swap left/right */
+[dir="rtl"] .js-hero__annotations .floating-annotation--1 {
+  left: auto;
+  right: -60px;
+}
+
+[dir="rtl"] .js-hero__annotations .floating-annotation--2 {
+  right: auto;
+  left: -50px;
+}
+
+[dir="rtl"] .js-hero__annotations .floating-annotation--3 {
+  left: auto;
+  right: -40px;
+}
+
+/* Step connector line direction: swap right to left */
+[dir="rtl"] .js-step:not(:last-child)::after {
+  right: auto;
+  left: -20px;
+  background: linear-gradient(270deg, var(--orange) 0%, transparent 100%);
+}
+
+/* CTA watermark position */
+[dir="rtl"] .js-cta-box__watermark {
+  right: auto;
+  left: -40px;
+}
+
+/* Download badge text alignment */
+[dir="rtl"] .download-badge__text {
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  /* On mobile the hero stacks — revert to column */
+  [dir="rtl"] .js-hero__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  [dir="rtl"] .js-cta-box__watermark {
+    right: auto;
+    left: -50px;
+  }
+}
+
+
+/* ─── Phone Mockup ─── */
+
+/* Employer preview: content + mockup side by side */
+[dir="rtl"] .employer-preview__inner {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+  [dir="rtl"] .employer-preview__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+/* ─── Responsive: RTL-specific mobile overrides ─── */
+
+@media (max-width: 768px) {
+  /* Footer is already column on mobile — text-align center is fine */
+}
