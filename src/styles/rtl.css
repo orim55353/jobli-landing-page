@@ -34,6 +34,14 @@
   [dir="rtl"] .navbar__cta.open {
     transform: translateX(0);
   }
+
+  [dir="rtl"] .navbar--splash .navbar__cta {
+    position: static;
+    transform: none;
+    opacity: 1;
+    pointer-events: auto;
+    width: auto;
+  }
 }
 
 
@@ -161,7 +169,10 @@
   }
 
   [dir="rtl"] .splash-mockup-wrap--phone .phone-mockup {
-    margin-right: -170px;
+    left: auto;
+    right: auto;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 

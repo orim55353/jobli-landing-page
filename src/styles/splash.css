@@ -471,8 +471,8 @@
   }
 
   .splash-hero__half {
-    min-height: 50vh;
-    padding: 100px 24px 60px;
+    min-height: auto;
+    padding: 80px 24px 48px;
   }
 
   .splash-hero__half--right {
@@ -488,6 +488,13 @@
 
   .splash-hero__headline {
     font-size: clamp(28px, 6vw, 36px);
+  }
+
+  .splash-hero__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .splash-hero__mockup-thumb {
@@ -513,13 +520,18 @@
   }
 
   .splash-mockup-wrap--phone {
-    width: 180px;
-    height: 370px;
+    width: 160px;
+    height: 330px;
+    display: flex;
+    justify-content: center;
+    overflow: visible;
   }
 
   .splash-mockup-wrap--phone .phone-mockup {
     transform: scale(0.53);
-    margin-left: -170px;
+    transform-origin: top center;
+    position: static;
+    margin: 0;
   }
 
   .floating-annotation {
@@ -551,5 +563,9 @@
 
   .navbar--splash .navbar__inner {
     justify-content: space-between;
+  }
+
+  .navbar--splash .navbar__cta .btn {
+    width: auto;
   }
 }
